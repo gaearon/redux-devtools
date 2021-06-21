@@ -144,13 +144,6 @@ export default class JSONNestedNode extends React.Component<Props, State> {
     this.state = getStateFromProps(props);
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps: Props) {
-    const nextState = getStateFromProps(nextProps);
-    if (getStateFromProps(this.props).expanded !== nextState.expanded) {
-      this.setState(nextState);
-    }
-  }
-
   shouldComponentUpdate(nextProps: Props, nextState: State) {
     return (
       !!Object.keys(nextProps).find(
