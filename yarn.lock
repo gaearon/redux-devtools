@@ -3377,7 +3377,9 @@ __metadata:
     "@redux-devtools/inspector-monitor-test-tab": ^0.7.2
     "@redux-devtools/inspector-monitor-trace-tab": ^0.2.2
     "@redux-devtools/log-monitor": ^2.3.0
+    "@redux-devtools/rtk-query-monitor": ^1.0.0
     "@redux-devtools/slider-monitor": ^2.0.0-8
+    "@reduxjs/toolkit": ^1.6.0
     "@rjsf/core": ^2.5.1
     "@types/json-schema": ^7.0.7
     "@types/socketcluster-client": ^13.0.4
@@ -3678,6 +3680,33 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@redux-devtools/rtk-query-monitor@^1.0.0, @redux-devtools/rtk-query-monitor@workspace:packages/redux-devtools-rtk-query-monitor":
+  version: 0.0.0-use.local
+  resolution: "@redux-devtools/rtk-query-monitor@workspace:packages/redux-devtools-rtk-query-monitor"
+  dependencies:
+    "@redux-devtools/core": ^3.9.0
+    "@redux-devtools/dock-monitor": ^1.4.0
+    "@reduxjs/toolkit": ^1.6.0
+    "@types/prop-types": ^15.7.3
+    "@types/react": ^16.14.8
+    "@types/redux-devtools-themes": ^1.0.0
+    devui: ^1.0.0-8
+    lodash.debounce: ^4.0.8
+    npm-run-all: ^4.1.5
+    prop-types: ^15.7.2
+    react: ^16.13.1
+    react-json-tree: ^0.15.0
+    redux: ^4.0.5
+    redux-devtools-themes: ^1.0.0
+  peerDependencies:
+    "@redux-devtools/core": ^3.7.0
+    "@reduxjs/toolkit": ^1.6.0
+    "@types/react": ^16.3.0 || ^17.0.0
+    react: ^16.3.0 || ^17.0.0
+    redux: ^3.4.0 || ^4.0.0
+  languageName: unknown
+  linkType: soft
+
 "@redux-devtools/serialize@^0.3.0, @redux-devtools/serialize@workspace:packages/redux-devtools-serialize":
   version: 0.0.0-use.local
   resolution: "@redux-devtools/serialize@workspace:packages/redux-devtools-serialize"
@@ -3729,6 +3758,26 @@ __metadata:
     redux: ^4.0.5
   languageName: unknown
   linkType: soft
+
+"@reduxjs/toolkit@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "@reduxjs/toolkit@npm:1.6.0"
+  dependencies:
+    immer: ^9.0.1
+    redux: ^4.1.0
+    redux-thunk: ^2.3.0
+    reselect: ^4.0.0
+  peerDependencies:
+    react: ^16.14.0 || ^17.0.0
+    react-redux: ^7.2.1
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-redux:
+      optional: true
+  checksum: b42d66cae4ea23ab23f394dd80ae9879b34dc995eda04a1f8aebc4fdfc03a7d138418ef103325d84594b43a616b7a70d1d306816ea823fbfd40502f56f124533
+  languageName: node
+  linkType: hard
 
 "@restart/context@npm:^2.1.4":
   version: 2.1.4
@@ -5435,9 +5484,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:>= 8":
-  version: 15.12.3
-  resolution: "@types/node@npm:15.12.3"
-  checksum: 1e7a4f5675416f4dd61a7c16a8754272d0772bec070c1737e848598dad5c4a04fd3d249aab2b456c0f66fbbe8eb0e831ae5d2a4873385fee33ccd4935a53d300
+  version: 15.12.4
+  resolution: "@types/node@npm:15.12.4"
+  checksum: 64b121a7e805379382aeb3eefed56c4c34f1ebf5e818ba2c732e43beebc4fbde20be438f3eaaffd8dba5062f0e0c9ae085127b7239906d170eda816885a6c508
   languageName: node
   linkType: hard
 
@@ -5557,7 +5606,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:*, @types/react-dom@npm:^16.9.13":
+"@types/react-dom@npm:*":
+  version: 17.0.8
+  resolution: "@types/react-dom@npm:17.0.8"
+  dependencies:
+    "@types/react": "*"
+  checksum: 3859a6e06ec4545319c159ea71814beb3822801f0d4c41219855258557722cbcec8b5fba84551489169ec228b8817b4c05a8ef0dc87eb2bafb4d1431d1af9608
+  languageName: node
+  linkType: hard
+
+"@types/react-dom@npm:^16.9.13":
   version: 16.9.13
   resolution: "@types/react-dom@npm:16.9.13"
   dependencies:
@@ -5635,7 +5693,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:>=16.14.8, @types/react@npm:>=16.9.11, @types/react@npm:^16, @types/react@npm:^16.14.8":
+"@types/react@npm:16.14.8":
   version: 16.14.8
   resolution: "@types/react@npm:16.14.8"
   dependencies:
@@ -8810,9 +8868,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001125, caniuse-lite@npm:^1.0.30001219":
-  version: 1.0.30001238
-  resolution: "caniuse-lite@npm:1.0.30001238"
-  checksum: 10dcc7059a44fc535f65131a9cb7f0e1a1187e488e5ddaa1a8ecacb5bfd5f2299d29d63bd5ee1385acf97de1f593e5cc97321b00c7a73e76627e706507fe06c0
+  version: 1.0.30001239
+  resolution: "caniuse-lite@npm:1.0.30001239"
+  checksum: 82e3e838dddeed62039d439dc98d070b3fdb989fa20204a27e7005a071ab6d09edd77e48718a5d73da41c862efba842cdb9de892ca3c9e993f7bcb8277786129
   languageName: node
   linkType: hard
 
@@ -9848,11 +9906,11 @@ __metadata:
   linkType: hard
 
 "convert-source-map@npm:^1.1.0, convert-source-map@npm:^1.4.0, convert-source-map@npm:^1.5.0, convert-source-map@npm:^1.6.0, convert-source-map@npm:^1.7.0":
-  version: 1.7.0
-  resolution: "convert-source-map@npm:1.7.0"
+  version: 1.8.0
+  resolution: "convert-source-map@npm:1.8.0"
   dependencies:
     safe-buffer: ~5.1.1
-  checksum: b10fbf041e3221c65e1ab67f05c8fcbad9c5fd078c62f4a6e05cb5fddc4b5a0e8a17c6a361c6a44f011b1a0c090b36aa88543be9dfa65da8c9e7f39c5de2d4df
+  checksum: 09eeb0b4dcc04e26c89a17f08b835a84c9024715dc839c07cff43e87e155011f6837571997bffed64de54832823c5e3931b54b211a369d379efc392a739bc972
   languageName: node
   linkType: hard
 
@@ -10900,7 +10958,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"devui@^1.0.0-9, devui@workspace:packages/devui":
+"devui@^1.0.0-8, devui@^1.0.0-9, devui@workspace:packages/devui":
   version: 0.0.0-use.local
   resolution: "devui@workspace:packages/devui"
   dependencies:
@@ -12050,8 +12108,8 @@ __metadata:
   linkType: hard
 
 "eslint@npm:^7.28.0":
-  version: 7.28.0
-  resolution: "eslint@npm:7.28.0"
+  version: 7.29.0
+  resolution: "eslint@npm:7.29.0"
   dependencies:
     "@babel/code-frame": 7.12.11
     "@eslint/eslintrc": ^0.4.2
@@ -12094,7 +12152,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: 9d49d53ed56a1f1ccba9c71482722a91f2423432df70a3694d36ea478f0e3bb058034f170219f34f3d6b5cd5d47510b269b75e2b4117f88a3241b1db9cb95828
+  checksum: 812f8c5123860cf5bd877018ffd29abd52bbaaca55fdd616008c97da9bf47a20a7b7c7ecb7c8f753c06f77ea5d59480f3d6d76475699b2ea380237fbb7c6b3a2
   languageName: node
   linkType: hard
 
@@ -12936,8 +12994,8 @@ __metadata:
   linkType: hard
 
 "fork-ts-checker-webpack-plugin@npm:^6.0.4":
-  version: 6.2.10
-  resolution: "fork-ts-checker-webpack-plugin@npm:6.2.10"
+  version: 6.2.12
+  resolution: "fork-ts-checker-webpack-plugin@npm:6.2.12"
   dependencies:
     "@babel/code-frame": ^7.8.3
     "@types/json-schema": ^7.0.5
@@ -12952,7 +13010,7 @@ __metadata:
     schema-utils: 2.7.0
     semver: ^7.3.2
     tapable: ^1.0.0
-  checksum: 2c067e05dd138cf1136f45d936baad59ca494521054c91547e915cc4b4e10e367634cf8241899cb76d1516f03d7d3b0711aa21cb552ed17863bf93a868184e91
+  checksum: ae17519010d811d0448d8db9a701168e92059b48fe34ae2775265a54dbea9785fd9863850efee15e2e8a08d527480484a0bd5539b9a7c8a3014ebd142d69aa49
   languageName: node
   linkType: hard
 
@@ -14906,6 +14964,13 @@ fsevents@^1.2.7:
   version: 8.0.1
   resolution: "immer@npm:8.0.1"
   checksum: a8c8d531af8f968f4d5a2ec3c5eeb6dd6933c69d216b3f8c55275e34c87926d556db4e3d81f5f038e66f9886e874da4ab4f7ffe228e33d718593820e2f57b68f
+  languageName: node
+  linkType: hard
+
+"immer@npm:^9.0.1":
+  version: 9.0.3
+  resolution: "immer@npm:9.0.3"
+  checksum: 98e0dabde5361afe30fb72d6b662682af2cd9be82919d78955901dabb9851ce00e8655cf935f68f4b055f250f9f33a0f80f94f3e954e7887228ee6710c9d05b4
   languageName: node
   linkType: hard
 
@@ -18373,6 +18438,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"memorystream@npm:^0.3.1":
+  version: 0.3.1
+  resolution: "memorystream@npm:0.3.1"
+  checksum: 825bcc7d3eb8bd021a1b0f8c81e4d7a8dc2eced1f8bb79d41ec978547cf118146d6863f5e6134f02bb55ee5d963a8689793e6e82ce8eb989bac339ae782728bb
+  languageName: node
+  linkType: hard
+
 "meow@npm:^3.3.0":
   version: 3.7.0
   resolution: "meow@npm:3.7.0"
@@ -19681,6 +19753,27 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"npm-run-all@npm:^4.1.5":
+  version: 4.1.5
+  resolution: "npm-run-all@npm:4.1.5"
+  dependencies:
+    ansi-styles: ^3.2.1
+    chalk: ^2.4.1
+    cross-spawn: ^6.0.5
+    memorystream: ^0.3.1
+    minimatch: ^3.0.4
+    pidtree: ^0.3.0
+    read-pkg: ^3.0.0
+    shell-quote: ^1.6.1
+    string.prototype.padend: ^3.0.0
+  bin:
+    npm-run-all: bin/npm-run-all/index.js
+    run-p: bin/run-p/index.js
+    run-s: bin/run-s/index.js
+  checksum: ef1b5b5a5fe7864d2b45c13de6dbffacde956bfc265117e0d1c8b05ee34264d494e5e65474d46592228e3a00857eae58359782fe7889d73de0a8714e6f9c0e83
+  languageName: node
+  linkType: hard
+
 "npm-run-path@npm:^2.0.0":
   version: 2.0.2
   resolution: "npm-run-path@npm:2.0.2"
@@ -20939,6 +21032,15 @@ fsevents@^1.2.7:
   version: 2.3.0
   resolution: "picomatch@npm:2.3.0"
   checksum: 80113a0fb70cfa62730d5aa3fd3d45b76bf3985f8494080ab2de1cc1fa3ba96d77990c7553a81401e16c51c0eb19c27cf5bc94f2196155090f26c8a167968001
+  languageName: node
+  linkType: hard
+
+"pidtree@npm:^0.3.0":
+  version: 0.3.1
+  resolution: "pidtree@npm:0.3.1"
+  bin:
+    pidtree: bin/pidtree.js
+  checksum: 8a48f063cb60e188bc94c307a309d309e20e9a3c3ca3537a035baf66dba2315f7b175d3a13a3b816db349dad270e347877b5aeae6d763360be650b3d1b1ca9b3
   languageName: node
   linkType: hard
 
@@ -22584,7 +22686,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react@npm:^16.14.0":
+"react@npm:^16.13.1, react@npm:^16.14.0":
   version: 16.14.0
   resolution: "react@npm:16.14.0"
   dependencies:
@@ -22958,7 +23060,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"redux@npm:^4.0.0, redux@npm:^4.1.0":
+"redux@npm:^4.0.0, redux@npm:^4.0.5, redux@npm:^4.1.0":
   version: 4.1.0
   resolution: "redux@npm:4.1.0"
   dependencies:
@@ -23416,6 +23518,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"reselect@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "reselect@npm:4.0.0"
+  checksum: 3480930929f673f12962cdde140dce48ea8ba171cd428bb2c7639672e41770bd6b64e935bc0400f47cfa960f617c7ac068c4309527373825d11e27262f08c0a3
+  languageName: node
+  linkType: hard
+
 "resolve-cwd@npm:^2.0.0":
   version: 2.0.0
   resolution: "resolve-cwd@npm:2.0.0"
@@ -23656,6 +23765,7 @@ resolve@^2.0.0-next.3:
     "@babel/preset-typescript": ^7.14.5
     "@types/jest": ^26.0.23
     "@types/node": ^14.17.3
+    "@types/react": ^16.14.8
     "@types/webpack": ^4.41.29
     "@types/webpack-dev-server": ^3.11.4
     "@types/webpack-env": ^1.16.0
@@ -24323,7 +24433,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"shell-quote@npm:1.7.2":
+"shell-quote@npm:1.7.2, shell-quote@npm:^1.6.1":
   version: 1.7.2
   resolution: "shell-quote@npm:1.7.2"
   checksum: 3b3d06814ca464cde8594c27bdd57a1f4c06b26ad2988b08b5819f97ac1edfd7cb7313fda1c909da33211972c72c5a7906b7da2b62078109f9d3274d3f404fa9

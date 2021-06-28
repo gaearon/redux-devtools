@@ -1,0 +1,72 @@
+{
+  "name": "@redux-devtools/rtk-query-monitor",
+  "version": "1.0.0",
+  "description": "rtk-query monitor for Redux DevTools",
+  "keywords": [
+    "redux",
+    "devtools",
+    "flux",
+    "react",
+    "redux-toolkit",
+    "rtk-query"
+  ],
+  "homepage": "https://github.com/FaberVitale/redux-devtools/tree/feat/rtk-query-monitor/packages/redux-devtools-rtk-query-monitor",
+  "bugs": {
+    "url": "https://github.com/reduxjs/redux-devtools/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "FaberVitale",
+    "url": "https://github.com/FaberVitale"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reduxjs/redux-devtools.git"
+  },
+  "scripts": {
+    "build": "npm run build:types && npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "start:demo": "cd demo && yarn start",
+    "start:ts": "tsc -p ./tsconfig.dev.json --watch",
+    "start": "run-p start:ts start:demo",
+    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
+    "clean": "rimraf lib",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "preversion": "npm run type-check && npm run lint",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "@redux-devtools/dock-monitor": "^1.4.0",
+    "@types/prop-types": "^15.7.3",
+    "@types/redux-devtools-themes": "^1.0.0",
+    "devui": "^1.0.0-8",
+    "lodash.debounce": "^4.0.8",
+    "prop-types": "^15.7.2",
+    "react-json-tree": "^0.15.0",
+    "redux-devtools-themes": "^1.0.0"
+  },
+  "devDependencies": {
+    "@redux-devtools/core": "^3.9.0",
+    "@reduxjs/toolkit": "^1.6.0",
+    "@types/react": "^16.14.8",
+    "npm-run-all": "^4.1.5",
+    "react": "^16.13.1",
+    "redux": "^4.0.5"
+  },
+  "peerDependencies": {
+    "@redux-devtools/core": "^3.7.0",
+    "@reduxjs/toolkit": "^1.6.0",
+    "@types/react": "^16.3.0 || ^17.0.0",
+    "react": "^16.3.0 || ^17.0.0",
+    "redux": "^3.4.0 || ^4.0.0"
+  }
+}
